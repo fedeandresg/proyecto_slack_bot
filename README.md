@@ -6,13 +6,19 @@
 Para este proyecto se trabajó en conjunto con la startup **`Holocruxe`** ante la necesidad de crear el primer motor de inteligencia artificial para la misma.
 Luego de varios intentos y deliberaciones se concluyó que un buen MVP sería la construcción de un Bot de Inteligencia Aritificial que pudiese integrarse a diversas plataformas con las que el usuario interactúa día a día.
 
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/src/holobot.png?raw=true)
+
 ## Contexto
 
 Se plantea la necesidad de crear un bot que mediante el uso de IA, permita mejorar y aumentar la productividad de los usuarios que utilizan la plataforma **`Slack`**. El bot debe poder ofrecer recomendaciones y/o sugerencias para mejorar la agenda del usuario en cuanto a sus tareas y/o actividades diarias.
 
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/src/haz_lo_que_amas.png?raw=true)
+
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/src/organiza_tu_dia.png?raw=true)
+
 ## Dataset
 
-Debido a que el trabajo en cuestión requiere de datos reales de usuarios activos, para las pruebas del bot y el entrenamiento del modelo de Machine Learning, se optó por trabajar con datos sintéticos creados mediante la librería `Faker` de **`Python`**.
+Debido a que el trabajo en cuestión requiere de datos reales de usuarios activos, para las pruebas del bot y el entrenamiento del modelo de Machine Learning, se optó por trabajar con [datos sintéticos](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/EDA%20y%20Modelo%20de%20machine-learning/Holobot_csv.csv) creados mediante la librería `Faker` de **`Python`**.
 
 ## Funcionamiento
 
@@ -26,6 +32,15 @@ Los datos serán recolectados a través de 2 formularios:
 
 Finalmente el HOLOBOT aplica IA para indicar si el usuario estuvo por encima o por debajo de la estimación de productividad para el día (variable objetivo definida en el modelo de Machine Learning).
 
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/base_de_datos.PNG?raw=true)
+
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/formulario_inicial.PNG?raw=true)
+
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/Formulario_finalizacion_1.PNG?raw=true)
+
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/formulario_finalizacion_2.PNG?raw=true )
+
+
 ## Stack tecnológico
 
 Para el proyecto se decidieron utilizar las siguientes tecnologías:
@@ -37,6 +52,14 @@ Para el proyecto se decidieron utilizar las siguientes tecnologías:
 - **`Power BI`**: plataforma para crear un dashboard interactivo sobre las respuestas del usuario que le será entregado semanalmente;
 - **`Amazon Web Services`**: entorno cloud para el deployment y puesta en producción (próximamente).
 
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/src/stack_tecnologico.png?raw=true)
+
+## Desarrollo del bot
+
+El bot se programó y desarrolló integramente en lenguaje **`Python`**. 
+Se pueden visualizar los códigos realizados en el siguiente
+[archivo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/holobot.py) 
+
 ## Modelo de Machine Learning
 
 Para el modelo de `Machine Learning` se utilizó un dataset con registros sintéticos el cual permitió el entrenamiento del modelo. Para el mismo se utilizó la librería de Python denominada **`Tensorflow`** con un modelo de `Regresión Lineal`. 
@@ -47,9 +70,20 @@ En esta etapa, el modelo no presenta grandes resultados en cuanto a métricas de
 Se pueden visualizar los códigos realizados en el siguiente
 [archivo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/EDA%20y%20Modelo%20de%20machine-learning/modelo_tensor_flow_holobot.ipynb)
 
+## Dashboard de Power BI
+
+Se diseñó un [Dashboard de Power BI](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Data%20viz/Holocruxe.pbix) que será alimentado con los datos provenientes de las colecciones de MongoDB y que a su vez le será entregado semanalmente al usuario a los efectos de brindar datos y descripciones sobre las áreas con las que se ha reunido, calificación de los descansos, evolución de la productividad, entre otras.
+
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Data%20viz/dashboard.PNG?raw=true)
+
+
 ## Deployment
 
 Para el deploy del proyecto, se ha planificado el uso de **`AWS`**.
 En esta primer etapa no se ha efectuado el deployment, y el trabajo se ha orientado a entregar un MVP para la evaluación y consideración de la puesta en producción.
 
+## Futuras líneas
 
+En una próxima versión, es deseable que el **`HOLOBOT`** se integre con otras aplicaciones como puede ser `Google Calendar`, `Whatsapp` y otras que le permitan al usuario mejorar e interactuar de  una forma más eficiente con su entorno y su agenda.
+
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/src/corre_la_voz.png?raw=true)
