@@ -24,15 +24,13 @@ Debido a que el trabajo en cuestión requiere de datos reales de usuarios activo
 
 **`HOLOBOT`** es un bot de slack que recopila datos en base a las respuestas a formularios que brinda el usuario. Su interfaz gráfica es similar a la de un formulario con botones de opción, donde el usuario puede elegir entre 2 ó más respuestas preestablecidas.
 
-Los datos son recolectados y almacenados en **`MongoDb`** en la base de datos `holobot_databse` a través de 2 formularios: 
+Los datos son recolectados a través de 2 formularios: 
 
-![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/base_de_datos.PNG?raw=true)
-
-- Un formulario que se completa al inicio de la jornada, el cual pregunta acerca de las tareas que se desarrollarán en el día. Las respuestas a dicho formulario son almacenadas en una colección de **`MongoDb`** denominada initial_questions como un documento por cada día y usuario. La intención es conocer si el usuario tiene agenda planeada o no para el día;
+- Un formulario que se completa al inicio de la jornada, el cual pregunta acerca de las tareas que se desarrollarán en el día. La intención es conocer si el usuario tiene agenda planeada o no para el día;
 
 ![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/formulario_inicial.PNG?raw=true)
 
-- Un formulario que se completa al finalizar la jornada acerca de las actividades que se desarrollaron en la misma. Las respuestas a dicho formulario son almacenadas en una colección de **`MongoDb`** denominada final_questions como un documento por cada día y usuario. La intención es conocer cómo el usuario ha desarrollado sus tareas durante el día y si ha cumplido los propósitos que tenía.
+- Un formulario que se completa al finalizar la jornada acerca de las actividades que se desarrollaron en la misma. La intención es conocer cómo el usuario ha desarrollado sus tareas durante el día y si ha cumplido los propósitos que tenía.
 
 ![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/Formulario_finalizacion_1.PNG?raw=true)
 
@@ -59,6 +57,14 @@ Para el proyecto se decidieron utilizar las siguientes tecnologías:
 El bot se programó y desarrolló integramente en lenguaje **`Python`**. 
 Se pueden visualizar los códigos realizados en el siguiente
 [archivo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/holobot.py) 
+
+## MongoDB
+
+Los datos son recolectados y almacenados en **`MongoDb`** en la base de datos `holobot_databse` a través de 2 colecciones:
+- Las respuestas a los formularios de inicio de jornada son almacenadas en una colección de MongoDb denominada `initial_questions` como un documento por cada día y usuario.
+- Las respuestas a los formularios de cierre de jornada son almacenadas en una colección de MongoDb denominada `final_questions` como un documento por cada día y usuario.
+
+![Logo](https://github.com/fedeandresg/proyecto_slack_bot/blob/main/Desarrollo_Bot/base_de_datos.PNG?raw=true)
 
 ## Modelo de Machine Learning
 
